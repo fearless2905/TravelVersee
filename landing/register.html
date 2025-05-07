@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login - TravelVerse</title>
+  <title>Register - TravelVersee</title>
   <link rel="stylesheet" href="./b6876f07166a0751.css" />
   <style>
     body, html {
@@ -13,7 +13,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: black;
       overflow: auto;
-      background-color: rgb(146, 146, 146);
+      background-color: white;
     }
     .background {
       position: fixed;
@@ -35,25 +35,25 @@
       background-color: rgba(255, 255, 255, 0.4);
       z-index: -1;
     }
-    .login-container {
+    .register-container {
       position: relative;
       max-width: 400px;
       margin: auto;
       top: 50%;
       transform: translateY(-50%);
-      background: whitesmoke;
+      background: white;
       padding: 2rem 3rem;
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
       box-sizing: border-box;
       color: black;
     }
-    .login-container h2 {
+    .register-container h2 {
       text-align: center;
       margin-bottom: 1.5rem;
       font-weight: 700;
       font-size: 2rem;
-      color: black; /* changed from green to black */
+      color: black;
     }
     .form-group {
       margin-bottom: 1.25rem;
@@ -65,16 +65,20 @@
       font-size: 1rem;
     }
     input[type="text"],
-    input[type="password"] {
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
       width: 100%;
       padding: 0.75rem 1rem;
       border-radius: 0.5rem;
-      border: none;
+      border: 1px solid black;
       font-size: 1rem;
       box-sizing: border-box;
     }
     input[type="text"]:focus,
-    input[type="password"]:focus {
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="tel"]:focus {
       outline: none;
       box-shadow: 0 0 5px #4ade80;
     }
@@ -93,18 +97,18 @@
     button:hover {
       background-color: #22c55e;
     }
-    .login-footer {
+    .register-footer {
       margin-top: 1rem;
       text-align: center;
       font-size: 0.875rem;
       color: black;
     }
-    .login-footer a {
+    .register-footer a {
       color: #0000ff;
       text-decoration: none;
       font-weight: 600;
     }
-    .login-footer a:hover {
+    .register-footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -112,22 +116,40 @@
 <body>
   <div class="background"></div>
   <div class="overlay"></div>
-  <div class="login-container" role="main" aria-label="Login form">
-    <h2>Login</h2>
-    <form action="/login" method="POST" novalidate>
-      <div class="form-group">
-        <label for="username">Username or Email</label>
-        <input type="text" id="username" name="username" required autocomplete="username" />
+  <div class="register-container" role="main" aria-label="Register form">
+    <h2>Register to TravelVersee</h2>
+    <form action="/register" method="POST" novalidate>
+      <div style="display: flex; gap: 1rem;">
+        <div class="form-group" style="flex: 1;">
+          <label for="fullname">Nama Lengkap</label>
+          <input type="text" id="fullname" name="fullname" required autocomplete="name" />
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label for="nickname">Nama Panggilan</label>
+          <input type="text" id="nickname" name="nickname" required autocomplete="nickname" />
+        </div>
+      </div>
+      <div style="display: flex; gap: 1rem;">
+        <div class="form-group" style="flex: 1;">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label for="phone">Nomor Telepon</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+        </div>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required autocomplete="current-password" />
+        <input type="password" id="password" name="password" required autocomplete="new-password" />
       </div>
-      <button type="submit">Log In</button>
-    </form>
-    <div class="login-footer">
-      <p>Don't have an account? <a href="/landing/register.html">Register</a></p>
-      <p><a href="/landing/forgot-password.html">Forgot password?</a></p>
+      <div class="form-group">
+        <label for="confirm-password">Konfirmasi Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password" />
+      </div>
+      <button type="submit">Register</button>
+    <div class="register-footer">
+      <p>Already have an account? <a href="/landing/login.html">Login</a></p>
     </div>
   </div>
 </body>
