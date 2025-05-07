@@ -28,8 +28,7 @@
             <div
               class="w-full h-[52px] mt-2 xl:mt-8 mb-3 lg:mb-5 xl:mb-10 flex items-center justify-between"
             >
-              <a
-              href="/landing/travelverse-dashboard.html"
+              <a href="/landing/travelverse-dashboard.html"
                 class="text-white font-bold text-2xl md:text-3xl xl:text-4xl"
               >
                 TravelVerse
@@ -143,69 +142,101 @@
                 <div
                   class="w-full h-3/6 md:h-3/5 xl:h-4/5 rounded-3xl mb-14 hehe"
                 >
-                  <div class="owl-carousel owl-theme w-full h-full rounded-3xl overflow-hidden">
-                    <div
-                      class="item w-full h-full rounded-3xl overflow-hidden bg-cover bg-center bg-item-main-ds"
-                      style="
-                        background-image: url('/images/travelverse-main-tour.jpg');
-                      "
-                    >
+                  <div
+                    class="swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress w-full h-full rounded-3xl overflow-hidden swiper-backface-hidden"
+                  >
+                    <div class="swiper-wrapper">
                       <div
-                        class="w-full h-full rounded-2xl overflow-hidden"
-                        style="opacity: 1"
+                        class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active w-full h-full rounded-3xl overflow-hidden bg-cover bg-center bg-item-main-ds"
+                        style="
+                          background-image: url('/images/travelverse-main-tour.jpg');
+                          width: 1248px;
+                          opacity: 1;
+                          transform: translate3d(0px, 0px, 0px);
+                        "
                       >
                         <div
-                          class="w-full h-full bg-item-main-ds flex items-center rounded-2xl relative"
+                          class="w-full h-full rounded-2xl overflow-hidden"
+                          style="opacity: 1"
                         >
                           <div
-                            class="block w-full h-max px-4 lg:px-12 2xl:px-24 py-3 xl:py-5 relative z-10"
+                            class="w-full h-full bg-item-main-ds flex items-center rounded-2xl relative"
                           >
-                            <h3
-                              class="xl:w-[600px] text-2xl md:text-4xl xl:text-6xl leading-tight mb-6 font-bold text-white"
-                            >
-                              Jelajahi Dunia dengan TravelVersee
-                            </h3>
                             <div
-                              class="md:w-3/4 lg:w-2/3 xl:w-[480px] lg:max-h-[70px] 2xl:max-h-[170px] text-ellipsis line-clamp-3 mb-6 text-xs sm:text-sm lg:text-base text-white opacity-70"
+                              class="block w-full h-max px-4 lg:px-12 2xl:px-24 py-3 xl:py-5 relative z-10"
                             >
+                              <h3
+                                class="xl:w-[600px] text-2xl md:text-4xl xl:text-6xl leading-tight mb-6 font-bold text-white"
+                              >
+                              Jelajahi Dunia dengan TravelVersee
+                              </h3>
+                              <div
+                                class="md:w-3/4 lg:w-2/3 xl:w-[480px] lg:max-h-[70px] 2xl:max-h-[170px] text-ellipsis line-clamp-3 mb-6 text-xs sm:text-sm lg:text-base text-white opacity-70"
+                              >
                               Temukan destinasi yang menakjubkan, pengalaman unik, dan petualangan tak terlupakan yang dirancang khusus untuk Anda.
-                            </div>
-                            <div class="flex items-center text-sm md:text-base">
-                              <a
-                                class="bg-primay-green box-shadow-spread px-3 py-2 xl:px-4 xl:py-2 2xl:px-7 2xl:py-4 !text-sm md:text-base rounded-full justify-center items-center flex cursor-pointer"
-                                href="/landing/travelverse-dashboard.html"
+                              </div>
+                              <div
+                                class="flex items-center text-sm md:text-base"
                               >
-                                <div
-                                  class="text-primay-green text-sm md:text-base 2xl:text-lg font-extralight tracking-wide cursor-pointer"
+                                <a
+                                  class="bg-primay-green box-shadow-spread px-3 py-2 xl:px-4 xl:py-2 2xl:px-7 2xl:py-4 !text-sm md:text-base rounded-full justify-center items-center flex cursor-pointer"
+                                  href="/landing/travelverse-dashboard.html"
                                 >
-                                  Mulai Sekarang
-                                </div>
-                                <svg
-                                  stroke="currentColor"
-                                  fill="none"
-                                  stroke-width="0"
-                                  viewBox="0 0 15 15"
-                                  class="text-white ml-2 text-xl font-bold"
-                                  height="1em"
-                                  width="1em"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                  <div
+                                    class="text-primay-green text-sm md:text-base 2xl:text-lg font-extralight tracking-wide cursor-pointer"
+                                  >
+                                    Mulai Sekarang
+                                  </div>
+                                  <svg
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-width="0"
+                                    viewBox="0 0 15 15"
+                                    class="text-white ml-2 text-xl font-bold"
+                                    height="1em"
+                                    width="1em"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </a>
+                                <a
+                                  class="ml-3 text-sm md:text-base text-white px-3 py-2 xl:px-4 xl:py-2 2xl:px-7 btn-link cursor-pointer"
+                                  >Lihat Detailnya</a
                                 >
-                                  <path
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
-                                    d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
-                                    fill="currentColor"
-                                  ></path>
-                                </svg>
-                              </a>
-                              <a
-                                class="ml-3 text-sm md:text-base text-white px-3 py-2 xl:px-4 xl:py-2 2xl:px-7 btn-link cursor-pointer"
-                                >Lihat Detailnya</a
-                              >
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      class="swiper-scrollbar swiper-scrollbar-horizontal swiper-scrollbar-lock"
+                      style="
+                        display: none;
+                        opacity: 0;
+                        transition-duration: 400ms;
+                      "
+                    >
+                      <div
+                        class="swiper-scrollbar-drag"
+                        style="
+                          transform: translate3d(0px, 0px, 0px);
+                          width: 0px;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"
+                    >
+                      <span
+                        class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                      ></span>
                     </div>
                   </div>
                 </div>

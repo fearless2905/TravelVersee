@@ -1,11 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - TravelVersee</title>
+  <link rel="stylesheet" href="./b6876f07166a0751.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      overflow: auto;
+    }
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/travelverse-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+    .login-container {
+      position: relative;
+      max-width: 400px;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      box-sizing: border-box;
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #4ade80; /* matching primary green */
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      box-shadow: 0 0 5px #4ade80;
+    }
+    button {
+      width: 100%;
+      background-color: #4ade80;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 9999px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #22c55e;
+    }
+    .login-footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #ccc;
+    }
+    .login-footer a {
+      color: #4ade80;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <div class="login-container" role="main" aria-label="Login form">
+    <h2>Login to TravelVersee</h2>
+    <form action="/login" method="POST" novalidate>
+      <div class="form-group">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username" required autocomplete="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" />
+      </div>
+      <button type="submit">Log In</button>
+    </form>
+    <div class="login-footer">
+      <p>Don't have an account? <a href="/landing/register.html">Register</a></p>
+      <p><a href="/landing/forgot-password.html">Forgot password?</a></p>
+    </div>
+  </div>
 </body>
 </html>
