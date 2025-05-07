@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login - TravelVerse</title>
+    <title>Register - TravelVerse</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -13,10 +13,10 @@
       rel="stylesheet"
     />
 
-    <meta name="description" content="Login page for TravelVerse" />
+    <meta name="description" content="Register page for TravelVerse" />
     <meta
       name="keywords"
-      content="login, travelverse, banyuwangi, virtual reality"
+      content="register, travelverse, banyuwangi, virtual reality"
     />
     <meta name="author" content="TravelVerse Team" />
 
@@ -72,8 +72,11 @@
                           <li>
                             <a href="gallery.html" class="animsition-link">Virtual Tour</a>
                           </li>
-                          <li class="active">
+                          <li>
                             <a href="login.html" class="animsition-link">Login</a>
+                          </li>
+                          <li class="active">
+                            <a href="register.html" class="animsition-link">Register</a>
                           </li>
                           <li>
                             <a href="blog.html" class="animsition-link">Blog</a>
@@ -102,10 +105,10 @@
             class="row site-hero-inner justify-content-center align-items-center"
           >
             <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="100" style="background: rgba(255, 255, 255, 0.9); padding: 2rem; border-radius: 1rem;">
-              <h2 class="mb-4">Login</h2>
-              <form action="/login" method="POST" novalidate>
+              <h2 class="mb-4">Register</h2>
+              <form action="/register" method="POST" novalidate>
                 <div class="form-group text-left">
-                  <label for="username">Username or Email</label>
+                  <label for="username">Username</label>
                   <input
                     type="text"
                     id="username"
@@ -116,27 +119,46 @@
                   />
                 </div>
                 <div class="form-group text-left">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group text-left">
                   <label for="password">Password</label>
                   <input
                     type="password"
                     id="password"
                     name="password"
                     required
-                    autocomplete="current-password"
+                    autocomplete="new-password"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group text-left">
+                  <label for="confirm_password">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    required
+                    autocomplete="new-password"
                     class="form-control"
                   />
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">
-                  Log In
+                  Register
                 </button>
               </form>
               <div class="login-footer mt-3">
                 <p>
-                  Don't have an account?
-                  <a href="register.html">Register</a>
-                </p>
-                <p>
-                  <a href="forgot-password.html">Forgot password?</a>
+                  Already have an account?
+                  <a href="login.html">Login</a>
                 </p>
               </div>
             </div>
@@ -144,6 +166,11 @@
         </div>
       </section>
       <!-- END section -->
+
+      <footer class="section footer-section" style="display:none;">
+      </footer>
+    </div>
+    <!-- .animsition -->
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
