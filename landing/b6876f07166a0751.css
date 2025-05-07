@@ -220,6 +220,7 @@ input:where([type="button"]),
 input:where([type="reset"]),
 input:where([type="submit"]) {
   -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -238,6 +239,7 @@ progress {
 }
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 ::-webkit-search-decoration {
@@ -311,7 +313,6 @@ object,
 svg,
 video {
   display: block;
-  vertical-align: middle;
 }
 img,
 video {
@@ -389,6 +390,7 @@ body {
   background: #000;
   background: linear-gradient(0deg, grey 0, #fff 50%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .bg-blur {
@@ -611,6 +613,7 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
 .block {
   display: block;
