@@ -1,0 +1,140 @@
+/* Custom CSS for redesigned dashboard page */
+
+body.dashboard {
+  background-color: #f5f7fa;
+  color: #333;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-header {
+  background-color: #004d40;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.dashboard-header a.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #a5d6a7;
+  text-decoration: none;
+}
+
+.dashboard-nav a {
+  color: #c8e6c9;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+  color: #81c784;
+}
+
+.dashboard-main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.dashboard-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section h2 {
+  margin-bottom: 1rem;
+  color: #004d40;
+  font-weight: 700;
+  border-bottom: 2px solid #81c784;
+  padding-bottom: 0.5rem;
+}
+
+.featured-destinations,
+.categories-list,
+.map-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #e8f5e9;
+  border-radius: 10px;
+  flex: 1 1 calc(33% - 1rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #81c784;
+}
+
+.card-body {
+  padding: 1rem;
+  color: #2e7d32;
+}
+
+.card-body h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.view-all-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #004d40;
+  color: #a5d6a7;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #81c784;
+  color: #fff;
+}
+
+.footer-section {
+  background-color: #004d40;
+  color: #c8e6c9;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-section a {
+  color: #a5d6a7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-section a:hover {
+  color: #81c784;
+}

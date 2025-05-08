@@ -60,17 +60,17 @@
                     <div class="row full-height align-items-center">
                       <div class="col-md-12 justify-content-center">
                         <ul class="list-unstyled menu">
-                          <li>
+                          <li class="active">
                             <a href="index.html" class="animsition-link"
                               >Home</a
                             >
                           </li>
                           <li>
-                            <a href="hotel.html" class="animsition-link"
+                            <a href="booking.html" class="animsition-link"
                               >Booking</a
                             >
                           </li>
-                          <li class="active">
+                          <li>
                             <a href="about.html" class="animsition-link"
                               >About Us</a
                             >
@@ -81,9 +81,12 @@
                             >
                           </li>
                           <li>
-                            <a href="blog.html" class="animsition-link"
-                              >Blog</a
+                            <a href="login.html" class="animsition-link"
+                              >Login</a
                             >
+                          </li>
+                          <li>
+                            <a href="blog.html" class="animsition-link">blog</a>
                           </li>
                           <li>
                             <a href="contact.html" class="animsition-link"
@@ -117,10 +120,10 @@
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-              TravelVerse adalah platform wisata virtual pertama di
-              Banyuwangi. Dengan menggunakan teknologi VR, Anda dapat mengunjungi Kawah Ijen,
-              Pantai Pulau Merah, dan Desa Adat Osing dan lain-lain secara imersif tanpa
-              keluar rumah.
+                TravelVerse adalah platform wisata virtual pertama di
+                Banyuwangi. Dengan menggunakan teknologi VR, Anda dapat
+                mengunjungi Kawah Ijen, Pantai Pulau Merah, dan Desa Adat Osing
+                dan lain-lain secara imersif tanpa keluar rumah.
               </p>
             </div>
           </div>
@@ -141,14 +144,19 @@
               <h2>Selamat Datang di TravelVerse</h2>
 
               <p>
-                TravelVerse menawarkan virtual tour yang memukau ke berbagai destinasi paling ikonik di Banyumas. Rasakan budaya, alam, dan petualangan dari rumah Anda yang nyaman.
+                TravelVerse menawarkan virtual tour yang memukau ke berbagai
+                destinasi paling ikonik di Banyumas. Rasakan budaya, alam, dan
+                petualangan dari rumah Anda yang nyaman.
               </p>
               <p>
-                Platform kami menggabungkan teknologi VR mutakhir dengan wawasan lokal untuk memberikan Anda pengalaman perjalanan yang autentik.
+                Platform kami menggabungkan teknologi VR mutakhir dengan wawasan
+                lokal untuk memberikan Anda pengalaman perjalanan yang autentik.
               </p>
 
               <p class="mt-5">
-                <a href="gallery.html" class="btn btn-primary uppercase"
+                <a
+                  href="travelverse-dashboard.html"
+                  class="btn btn-primary uppercase"
                   >Explore Virtual Tours</a
                 >
               </p>
@@ -163,7 +171,8 @@
             <div class="col-md-8">
               <h2 class="heading" data-aos="fade-up">Hotel Gallery</h2>
               <p class="lead" data-aos="fade-up" data-aos-delay="100">
-                Temukan hotel terbaik di Banyuwangi untuk melengkapi pengalaman perjalanan virtual Anda.
+                Temukan hotel terbaik di Banyuwangi untuk melengkapi pengalaman
+                perjalanan virtual Anda.
               </p>
             </div>
           </div>
@@ -230,7 +239,8 @@
             <div class="col-md-8">
               <h2 class="heading" data-aos="fade-up">Team</h2>
               <p class="lead" data-aos="fade-up">
-                Tim kami yang berdedikasi bekerja untuk memberikan Anda pengalaman perjalanan virtual terbaik.
+                Tim kami yang berdedikasi bekerja untuk memberikan Anda
+                pengalaman perjalanan virtual terbaik.
               </p>
             </div>
           </div>
@@ -376,78 +386,150 @@
     <script src="js/animsition.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
-  <!-- Chatbot UI -->
-  <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-family: Arial, sans-serif;">
-    <button id="chatbot-toggle" style="background-color: #4ade80; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-      <span style="font-size: 30px; color: black;">💬</span>
-    </button>
-    <div id="chatbot" style="display: none; width: 300px; height: 400px; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-top: 10px; display: flex; flex-direction: column;">
-      <div id="chatbot-messages" style="flex: 1; padding: 10px; overflow-y: auto; font-size: 14px; color: black;"></div>
-      <form id="chatbot-form" style="display: flex; border-top: 1px solid #ddd;">
-        <input id="chatbot-input" type="text" placeholder="Tanyakan tentang wisata Banyuwangi..." style="flex: 1; border: none; padding: 10px; font-size: 14px; border-radius: 0 0 0 10px;" autocomplete="off" />
-        <button type="submit" style="background-color: #4ade80; border: none; padding: 0 15px; cursor: pointer; border-radius: 0 0 10px 0;">Kirim</button>
-      </form>
+
+    <!-- Chatbot UI -->
+    <div
+      id="chatbot-container"
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <button
+        id="chatbot-toggle"
+        style="
+          background-color: #4ade80;
+          border: none;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          cursor: pointer;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        "
+      >
+        <span style="font-size: 30px; color: black">💬</span>
+      </button>
+      <div
+        id="chatbot"
+        style="
+          display: none;
+          width: 300px;
+          height: 400px;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <div
+          id="chatbot-messages"
+          style="
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 14px;
+            color: black;
+          "
+        ></div>
+        <form
+          id="chatbot-form"
+          style="display: flex; border-top: 1px solid #ddd"
+        >
+          <input
+            id="chatbot-input"
+            type="text"
+            placeholder="Tanyakan tentang wisata Banyuwangi..."
+            style="
+              flex: 1;
+              border: none;
+              padding: 10px;
+              font-size: 14px;
+              border-radius: 0 0 0 10px;
+            "
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            style="
+              background-color: #4ade80;
+              border: none;
+              padding: 0 15px;
+              cursor: pointer;
+              border-radius: 0 0 10px 0;
+            "
+          >
+            Kirim
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <script>
-    const chatbotToggle = document.getElementById('chatbot-toggle');
-    const chatbot = document.getElementById('chatbot');
-    const chatbotMessages = document.getElementById('chatbot-messages');
-    const chatbotForm = document.getElementById('chatbot-form');
-    const chatbotInput = document.getElementById('chatbot-input');
+    <script>
+      const chatbotToggle = document.getElementById("chatbot-toggle");
+      const chatbot = document.getElementById("chatbot");
+      const chatbotMessages = document.getElementById("chatbot-messages");
+      const chatbotForm = document.getElementById("chatbot-form");
+      const chatbotInput = document.getElementById("chatbot-input");
 
-    // Initially chatbot is hidden, only button visible
-    chatbot.style.display = 'none';
+      // Initially chatbot is hidden, only button visible
+      chatbot.style.display = "none";
 
-    chatbotToggle.addEventListener('click', () => {
-      if (chatbot.style.display === 'none' || chatbot.style.display === '') {
-        chatbot.style.display = 'flex';
-        chatbotInput.focus();
-      } else {
-        chatbot.style.display = 'none';
+      chatbotToggle.addEventListener("click", () => {
+        if (chatbot.style.display === "none" || chatbot.style.display === "") {
+          chatbot.style.display = "flex";
+          chatbotInput.focus();
+        } else {
+          chatbot.style.display = "none";
+        }
+      });
+
+      function appendMessage(sender, text) {
+        const messageDiv = document.createElement("div");
+        messageDiv.style.marginBottom = "10px";
+        messageDiv.style.textAlign = sender === "user" ? "right" : "left";
+        messageDiv.innerHTML =
+          "<strong>" +
+          (sender === "user" ? "Anda" : "Bot") +
+          ":</strong> " +
+          text;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
       }
-    });
 
-    function appendMessage(sender, text) {
-      const messageDiv = document.createElement('div');
-      messageDiv.style.marginBottom = '10px';
-      messageDiv.style.textAlign = sender === 'user' ? 'right' : 'left';
-      messageDiv.innerHTML = '<strong>' + (sender === 'user' ? 'Anda' : 'Bot') + ':</strong> ' + text;
-      chatbotMessages.appendChild(messageDiv);
-      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    }
-
-    function getBotResponse(message) {
-      // Simple rule-based responses for demonstration
-      const msg = message.toLowerCase();
-      if (msg.includes('wisata') || msg.includes('tempat wisata')) {
-        return 'Banyuwangi memiliki banyak tempat wisata menarik seperti Kawah Ijen, Pantai Pulau Merah, dan Desa Adat Osing.';
-      } else if (msg.includes('kuliner')) {
-        return 'Anda bisa mencoba makanan tradisional seperti Sego Tempong dan Pecel Pitik di Banyuwangi.';
-      } else if (msg.includes('jam buka')) {
-        return 'Jam buka tempat wisata biasanya mulai pukul 08.00 hingga 17.00 WIB.';
-      } else if (msg.includes('harga') || msg.includes('tiket')) {
-        return 'Harga tiket bervariasi tergantung tempat wisata, biasanya mulai dari Rp 10.000 hingga Rp 50.000.';
-      } else if (msg.includes('halo') || msg.includes('hai')) {
-        return 'Halo! Ada yang bisa saya bantu tentang wisata di Banyuwangi?';
-      } else {
-        return 'Maaf, saya belum mengerti pertanyaan Anda. Silakan coba tanyakan hal lain tentang wisata Banyuwangi.';
+      function getBotResponse(message) {
+        // Simple rule-based responses for demonstration
+        const msg = message.toLowerCase();
+        if (msg.includes("wisata") || msg.includes("tempat wisata")) {
+          return "Banyuwangi memiliki banyak tempat wisata menarik seperti Kawah Ijen, Pantai Pulau Merah, dan Desa Adat Osing.";
+        } else if (msg.includes("kuliner")) {
+          return "Anda bisa mencoba makanan tradisional seperti Sego Tempong dan Pecel Pitik di Banyuwangi.";
+        } else if (msg.includes("jam buka")) {
+          return "Jam buka tempat wisata biasanya mulai pukul 08.00 hingga 17.00 WIB.";
+        } else if (msg.includes("harga") || msg.includes("tiket")) {
+          return "Harga tiket bervariasi tergantung tempat wisata, biasanya mulai dari Rp 10.000 hingga Rp 50.000.";
+        } else if (msg.includes("halo") || msg.includes("hai")) {
+          return "Halo! Ada yang bisa saya bantu tentang wisata di Banyuwangi?";
+        } else {
+          return "Maaf, saya belum mengerti pertanyaan Anda. Silakan coba tanyakan hal lain tentang wisata Banyuwangi.";
+        }
       }
-    }
 
-    chatbotForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const userMessage = chatbotInput.value.trim();
-      if (!userMessage) return;
-      appendMessage('user', userMessage);
-      chatbotInput.value = '';
-      setTimeout(() => {
-        const botReply = getBotResponse(userMessage);
-        appendMessage('bot', botReply);
-      }, 500);
-    });
-  </script>
-
+      chatbotForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userMessage = chatbotInput.value.trim();
+        if (!userMessage) return;
+        appendMessage("user", userMessage);
+        chatbotInput.value = "";
+        setTimeout(() => {
+          const botReply = getBotResponse(userMessage);
+          appendMessage("bot", botReply);
+        }, 500);
+      });
+    </script>
   </body>
 </html>
