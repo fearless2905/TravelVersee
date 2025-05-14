@@ -45,7 +45,7 @@ const Header = () => {
       <div>
         <img src={IjenImage} className="bg-image" alt="Background" />
       </div>
-      <div className="brand">Travel Verse</div>
+      <div className="brand">TravelVerse</div>
       <div id="menu-toggle" className="center">
         <div></div>
       </div>
