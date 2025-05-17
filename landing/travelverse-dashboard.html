@@ -2,688 +2,409 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TravelVerse Dashboard</title>
-    <link rel="stylesheet" href="./b6876f07166a0751.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    </style>
   </head>
-  <body style="overflow: auto">
-    <div class="__className_6b8127">
-      <section
-        aria-label="Notifications alt+T"
-        tabindex="-1"
-        aria-live="polite"
-        aria-relevant="additions text"
-        aria-atomic="false"
-      ></section>
-      <div
-        class="w-full min-h-screen relative bg-no-repeat background-dashboard-zoom"
-        style="background-image: url('/images/travelverse-bg.jpg')"
+  <body
+    class="bg-cover bg-center min-h-screen text-white"
+    style="background-image: url('images/banyuwangi1.jpg')"
+  >
+    <div class="min-h-screen bg-black bg-opacity-60 flex flex-col">
+      <!-- Header -->
+      <header
+        class="w-full py-6 px-4 md:px-10 flex items-center justify-between"
       >
-        <div
-          class="w-full h-screen flex justify-center absolute z-10 bg-black bg-opacity-40 box-border pb-10 xl:pb-28"
-        >
-          <div
-            class="w-full sm:w-[90%] 2xl:w-2/3 h-[92%] md:h-[88%] 2xl:max-h-[90%] block px-5 lg:px-0"
+        <div class="flex gap-4 items-center">
+          <a href="index.html" class="text-2xl font-bold tracking-wide"
+            >TravelVerse</a
           >
-            <div
-              class="w-full h-[52px] mt-2 xl:mt-8 mb-3 lg:mb-5 xl:mb-10 flex items-center justify-between"
+        </div>
+        <div class="flex gap-4 items-center">
+          <a href="alltour.html" class="hover:underline text-sm">All Tours</a>
+          <a href="locations.html" class="hover:underline text-sm">Locations</a>
+          <a href="/landing/categories.html" class="hover:underline text-sm"
+            >Categories</a
+          >
+          <button class="hover:rotate-90 transition duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 4a6 6 0 100 12A6 6 0 0010 4z" />
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7a1 1 0 112 0v3a1 1 0 11-2 0v-3zM9 7a1 1 0 112 0 1 1 0 01-2 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="flex-1 flex items-center justify-center px-6">
+        <div class="max-w-4xl glass rounded-3xl p-8 text-center">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">
+            Explore Banyuwangi with TravelVerse
+          </h1>
+          <p class="text-sm md:text-lg text-white/80 mb-6">
+            Discover breathtaking destinations, unique experiences, and
+            unforgettable adventures tailored just for you.
+          </p>
+          <div class="flex justify-center gap-4">
+            <a
+              href="/landing/travelverse-dashboard.html"
+              class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-all"
+              >Start Now</a
             >
-              <a
-                href="index.html"
-                class="text-white font-bold text-2xl md:text-3xl xl:text-4xl"
-              >
-                TravelVerse
-              </a>
+            <a
+              href="#"
+              class="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-full transition-all"
+              >View Detail</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-10" id="featured-destinations-section">
+        <div class="glass rounded-3xl p-8 max-w-6xl mx-auto">
+          <h2 class="text-2xl font-semibold mb-6">Featured Destinations</h2>
+          <div
+            class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
+            id="featured-destinations-grid"
+          >
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/pantai.jpg"
+                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
               <div
-                class="p-2 xl:p-3 bg-blur rounded-2xl cursor-pointer flex justify-center"
+                class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent"
               >
-                <button
-                  type="button"
-                  aria-haspopup="dialog"
-                  aria-expanded="false"
-                  aria-controls="settings-dialog"
-                  data-state="closed"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 256 256"
-                    class="text-white text-xl cursor-pointer hover:rotate-90 transition-all"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M128,76a52,52,0,1,0,52,52A52.06,52.06,0,0,0,128,76Zm0,80a28,28,0,1,1,28-28A28,28,0,0,1,128,156Zm113.86-49.57A12,12,0,0,0,236,98.34L208.21,82.49l-.11-31.31a12,12,0,0,0-4.25-9.12,116,116,0,0,0-38-21.41,12,12,0,0,0-9.68.89L128,37.27,99.83,21.53a12,12,0,0,0-9.7-.9,116.06,116.06,0,0,0-38,21.47,12,12,0,0,0-4.24,9.1l-.14,31.34L20,98.35a12,12,0,0,0-5.85,8.11,110.7,110.7,0,0,0,0,43.11A12,12,0,0,0,20,157.66l27.82,15.85.11,31.31a12,12,0,0,0,4.25,9.12,116,116,0,0,0,38,21.41,12,12,0,0,0,9.68-.89L128,218.73l28.14,15.74a12,12,0,0,0,9.7.9,116.06,116.06,0,0,0,38-21.47,12,12,0,0,0,4.24-9.1l.14-31.34,27.81-15.81a12,12,0,0,0,5.85-8.11A110.7,110.7,0,0,0,241.86,106.43Zm-22.63,33.18-26.88,15.28a11.94,11.94,0,0,0-4.55,4.59c-.54,1-1.11,1.93-1.7,2.88a12,12,0,0,0-1.83,6.31L184.13,199a91.83,91.83,0,0,1-21.07,11.87l-27.15-15.19a12,12,0,0,0-5.86-1.53h-.29c-1.14,0-2.3,0-3.44,0a12.08,12.08,0,0,0-6.14,1.51L93,210.82A92.27,92.27,0,0,1,71.88,199l-.11-30.24a12,12,0,0,0-1.83-6.32c-.58-.94-1.16-1.91-1.7-2.88A11.92,11.92,0,0,0,63.7,155L36.8,139.63a86.53,86.53,0,0,1,0-23.24l26.88-15.28a12,12,0,0,0,4.55-4.58c.54-1,1.11-1.94,1.7-2.89a12,12,0,0,0,1.83-6.31L71.87,57A91.83,91.83,0,0,1,92.94,45.17l27.15,15.19a11.92,11.92,0,0,0,6.15,1.52c1.14,0,2.3,0,3.44,0a12.08,12.08,0,0,0,6.14-1.51L163,45.18A92.27,92.27,0,0,1,184.12,57l.11,30.24a12,12,0,0,0,1.83,6.32c.58.94,1.16,1.91,1.7,2.88A11.92,11.92,0,0,0,192.3,101l26.9,15.33A86.53,86.53,0,0,1,219.23,139.61Z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <div
-                class="flex items-center justify-center gap-1 md:gap-11 px-2 xl:px-6 py-1 xl:py-2 bg-blur rounded-2xl"
-              >
-                <a
-                  href="/landing/tours.html"
-                  class="flex items-center justify-center px-3.5 py-1 btn-link"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="mr-2 text-white text-base cursor-pointer"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0"></path>
-                    <path d="M3.6 9h16.8"></path>
-                    <path d="M3.6 15h16.8"></path>
-                    <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-                    <path d="M12.5 3a17 17 0 0 1 0 18"></path>
-                  </svg>
-                  <span class="text-white font-thin text-xs cursor-pointer"
-                    >All Tours</span
-                  >
-                </a>
-                <a
-                  href="locations.html"
-                  class="flex items-center justify-center px-3.5 py-1 btn-link"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 576 512"
-                    class="mr-2 text-white text-base cursor-pointer"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M560.02 32c-1.96 0-3.98.37-5.96 1.16L384.01 96H384L212 35.28A64.252 64.252 0 0 0 191.76 32c-6.69 0-13.37 1.05-19.81 3.14L20.12 87.95A32.006 32.006 0 0 0 0 117.66v346.32C0 473.17 7.53 480 15.99 480c1.96 0 3.97-.37 5.96-1.16L192 416l172 60.71a63.98 63.98 0 0 0 40.05.15l151.83-52.81A31.996 31.996 0 0 0 576 394.34V48.02c0-9.19-7.53-16.02-15.98-16.02zM224 90.42l128 45.19v285.97l-128-45.19V90.42zM48 418.05V129.07l128-44.53v286.2l-.64.23L48 418.05zm480-35.13l-128 44.53V141.26l.64-.24L528 93.95v288.97z"
-                    ></path>
-                  </svg>
-                  <span class="text-white font-thin text-xs cursor-pointer"
-                    >Locations</span
-                  >
-                </a>
-                <a
-                  href="/landing/categories.html"
-                  class="flex items-center justify-center px-3.5 py-1 btn-link"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 512 512"
-                    class="mr-2 text-white text-base cursor-pointer"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
-                    ></path>
-                  </svg>
-                  <span class="text-white font-thin text-xs cursor-pointer"
-                    >Categories</span
-                  >
-                </a>
+                <h3 class="text-lg font-bold">Tropical Paradise Beach</h3>
+                <p class="text-sm text-white/70">Banyuwangi, Indonesia</p>
               </div>
             </div>
-            <div class="w-full h-full bg-blur rounded-3xl p-4 main-content">
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/kerbau..jpg"
+                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
               <div
-                class="w-full h-full overflow-y-auto"
-                style="opacity: 1; transform: none"
+                class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent"
               >
-                <div
-                  class="w-full h-[90vh] md:h-[85vh] xl:h-[85vh] rounded-3xl mb-6 hehe"
-                >
-                  <div
-                    class="swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress w-full h-full rounded-3xl overflow-hidden swiper-backface-hidden"
-                  >
-                    <div class="swiper-wrapper">
-                      <div
-                        class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active w-full h-full rounded-3xl overflow-hidden bg-cover bg-center bg-item-main-ds"
-                        style="
-                          background-image: url('images/banyuwangi1.jpg');
-                          width: 1248px;
-                          opacity: 1;
-                          transform: translate3d(0px, 0px, 0px);
-                        "
-                      >
-                        <div
-                          class="w-full h-full rounded-2xl overflow-hidden"
-                          style="opacity: 1"
-                        >
-                          <div
-                            class="w-full h-full bg-item-main-ds flex items-center rounded-2xl relative"
-                          >
-                            <div
-                              class="block w-full h-max px-4 lg:px-12 2xl:px-24 py-3 xl:py-5 relative z-10"
-                            >
-                              <h3
-                                class="xl:w-[600px] text-2xl md:text-4xl xl:text-6xl leading-tight mb-6 font-bold text-white"
-                              >
-                                Explore Banyuwangi with TravelVerse
-                              </h3>
-                              <div
-                                class="md:w-3/4 lg:w-2/3 xl:w-[480px] lg:max-h-[70px] 2xl:max-h-[170px] text-ellipsis line-clamp-3 mb-6 text-xs sm:text-sm lg:text-base text-white opacity-70"
-                              >
-                                Discover breathtaking destinations, unique
-                                experiences, and unforgettable adventures
-                                tailored just for you.
-                              </div>
-                              <div
-                                class="flex items-center text-sm md:text-base"
-                              >
-                                <a
-                                  class="bg-primay-green box-shadow-spread px-3 py-2 xl:px-4 xl:py-2 2xl:px-7 2xl:py-4 !text-sm md:text-base rounded-full justify-center items-center flex cursor-pointer"
-                                  href="/landing/travelverse-dashboard.html"
-                                >
-                                  <div
-                                    class="text-primay-green text-sm md:text-base 2xl:text-lg font-extralight tracking-wide cursor-pointer"
-                                  >
-                                    Start Now
-                                  </div>
-                                  <svg
-                                    stroke="currentColor"
-                                    fill="none"
-                                    stroke-width="0"
-                                    viewBox="0 0 15 15"
-                                    class="text-white ml-2 text-xl font-bold"
-                                    height="1em"
-                                    width="1em"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
-                                      fill="currentColor"
-                                    ></path>
-                                  </svg>
-                                </a>
-                                <a
-                                  class="ml-3 text-sm md:text-base text-white px-3 py-2 xl:px-4 xl:py-2 2xl:px-7 btn-link cursor-pointer"
-                                  >View Detail</a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="swiper-scrollbar swiper-scrollbar-horizontal swiper-scrollbar-lock"
-                      style="
-                        display: none;
-                        opacity: 0;
-                        transition-duration: 400ms;
-                      "
-                    >
-                      <div
-                        class="swiper-scrollbar-drag"
-                        style="
-                          transform: translate3d(0px, 0px, 0px);
-                          width: 0px;
-                        "
-                      ></div>
-                    </div>
-                    <div
-                      class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"
-                    >
-                      <span
-                        class="swiper-pagination-bullet swiper-pagination-bullet-active"
-                      ></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full block mb-20">
-                  <div class="flex items-center mb-4 md:mb-8">
-                    <h3
-                      class="w-full text-xl md:text-2xl text-white ml-3 font-semibold flex justify-between items-center"
-                    >
-                      Featured Destinations
-                    </h3>
-                  </div>
-                  <div
-                    class="w-full h-max grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
-                  >
-                    <div
-                      class="cursor-pointer rounded-3xl overflow-hidden border-4 border-transparent hover:border-white transition-all duration-500 ease-in-out"
-                      style="opacity: 1"
-                    >
-                      <div
-                        class="relative w-full h-[180px] md:h-[235px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                        style="background-image: url('images/pantai.jpg')"
-                      >
-                        <div
-                          class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-end bg-gradient-to-b"
-                        >
-                          <div class="w-full h-max">
-                            <h6
-                              class="text-xl md:text-2xl font-medium text-white leading-10"
-                            >
-                              Tropical Paradise Beach
-                            </h6>
-                            <label class="text-base font-light text-white/70"
-                              >Banyuwangi, Indonesia</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="cursor-pointer rounded-3xl overflow-hidden border-4 border-transparent hover:border-white transition-all duration-500 ease-in-out"
-                      style="opacity: 1"
-                    >
-                      <div
-                        class="relative w-full h-[180px] md:h-[235px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                        style="background-image: url('images/kerbau..jpg')"
-                      >
-                        <div
-                          class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-end bg-gradient-to-b"
-                        >
-                          <div class="w-full h-max">
-                            <h6
-                              class="text-xl md:text-2xl font-medium text-white leading-10"
-                            >
-                              Mountain Adventure Trails
-                            </h6>
-                            <label class="text-base font-light text-white/70"
-                              >Banyuwangi</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="cursor-pointer rounded-3xl overflow-hidden border-4 border-transparent hover:border-white transition-all duration-500 ease-in-out"
-                      style="opacity: 1"
-                    >
-                      <div
-                        class="relative w-full h-[180px] md:h-[235px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                        style="background-image: url('images/patung.jpg')"
-                      >
-                        <div
-                          class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-end bg-gradient-to-b"
-                        >
-                          <div class="w-full h-max">
-                            <h6
-                              class="text-xl md:text-2xl font-medium text-white leading-10"
-                            >
-                              Historic Cityscape
-                            </h6>
-                            <label class="text-base font-light text-white/70"
-                              >Banyuwangi</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full block mb-20">
-                  <div class="flex items-center mb-8">
-                    <h3
-                      class="text-2xl text-white ml-3 font-semibold flex items-center justify-between w-full"
-                    >
-                      Map Locations
-                    </h3>
-                    <a
-                      class="w-max flex items-center justify-center px-2 py-1 btn-link gap-2"
-                      href="landing/locations.html"
-                    >
-                      <h6
-                        class="text-white font-thin text-base cursor-pointer m-0 whitespace-nowrap"
-                      >
-                        View All
-                      </h6>
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="m-0 text-white text-xl cursor-pointer"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </a>
-                  </div>
-                  <div
-                    class="w-full h-max grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
-                  >
-                    <div
-                      class="cursor-pointer overflow-hidden rounded-3xl border-4 border-transparent hover:border-white transition-all duration-500 ease-in-out"
-                    >
-                      <a href="/landing/location/1.html">
-                        <div
-                          class="relative w-full h-[120px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                          style="
-                            background-image: url('images/banyuwangi1.jpg');
-                          "
-                        >
-                          <div
-                            class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-center bg-gradient-to-l"
-                          >
-                            <div class="w-full h-max">
-                              <h6
-                                class="text-xl md:text-2xl font-medium text-white leading-10"
-                              >
-                                Banyuwangi
-                              </h6>
-                              <label
-                                class="text-base font-light text-white/70"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      class="cursor-pointer overflow-hidden rounded-3xl border-4 border-transparent hover:border-white transition-all duration-500 ease-in-out"
-                    >
-                      <a href="/landing/location/2.html">
-                        <div
-                          class="relative w-full h-[120px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                          style="background-image: url('images/baluran.jpg')"
-                        >
-                          <div
-                            class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-center bg-gradient-to-l"
-                          >
-                            <div class="w-full h-max">
-                              <h6
-                                class="text-xl md:text-2xl font-medium text-white leading-10"
-                              >
-                                Baluran
-                              </h6>
-                              <label
-                                class="text-base font-light text-white/70"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      class="cursor-pointer overflow-hidden rounded-3xl border-4 border-transparent hover:border-white transition-all duration-500 ease-in-out"
-                    >
-                      <a href="/landing/location/3.html">
-                        <div
-                          class="relative w-full h-[120px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                          style="background-image: url('images/pulaumerah.jpg')"
-                        >
-                          <div
-                            class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-center bg-gradient-to-l"
-                          >
-                            <div class="w-full h-max">
-                              <h6
-                                class="text-xl md:text-2xl font-medium text-white leading-10"
-                              >
-                                Pantai Merah
-                              </h6>
-                              <label
-                                class="text-base font-light text-white/70"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full block">
-                  <div class="flex items-center mb-8">
-                    <h3
-                      class="text-2xl text-white ml-3 font-semibold w-full flex items-center justify-between"
-                    >
-                      Categories
-                    </h3>
-                    <a
-                      class="w-max flex items-center justify-center px-2 py-1 btn-link gap-2"
-                      href="/landing/categories.html"
-                    >
-                      <h6
-                        class="text-white font-thin text-base cursor-pointer m-0 whitespace-nowrap"
-                      >
-                        View All
-                      </h6>
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="m-0 text-white text-xl cursor-pointer"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </a>
-                  </div>
-                  <div
-                    class="w-full h-max grid grid-cols-1 lg:grid-cols-2 gap-5"
-                  >
-                    <div
-                      class="cursor-pointer overflow-hidden border-4 border-transparent rounded-3xl hover:border-white transition-all duration-500 ease-in-out"
-                    >
-                      <a href="/landing/category/1.html">
-                        <div
-                          class="relative w-full h-[150px] md:h-[200px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                          style="
-                            background-image: url('https://cdn-pameran360.baliprov.dev/image/virtual_tour/categories/thumbnail/0jJ1IjT8wAOkvgC8dnq22V1adRmcZgcFHYPs9jY2.jpg');
-                          "
-                        >
-                          <div
-                            class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-center bg-gradient-to-l"
-                          >
-                            <div class="w-full h-max">
-                              <h6
-                                class="text-xl md:text-2xl font-medium text-white leading-10"
-                              >
-                                Adventure
-                              </h6>
-                              <label
-                                class="text-base font-light text-white/70"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      class="cursor-pointer overflow-hidden border-4 border-transparent rounded-3xl hover:border-white transition-all duration-500 ease-in-out"
-                    >
-                      <a href="/landing/category/2.html">
-                        <div
-                          class="relative w-full h-[150px] md:h-[200px] rounded-2xl overflow-hidden bg-no-repeat bg-cover bg-custom-gradient bg-center"
-                          style="
-                            background-image: url('https://cdn-pameran360.baliprov.dev/image/virtual_tour/categories/thumbnail/ruVvnwyaR7CKEpaCt5dqbFZVKzz2ivF1X8ljZzT4.jpg');
-                          "
-                        >
-                          <div
-                            class="w-full h-full absolute z-10 px-4 md:px-8 py-4 flex items-center bg-gradient-to-l"
-                          >
-                            <div class="w-full h-max">
-                              <h6
-                                class="text-xl md:text-2xl font-medium text-white leading-10"
-                              >
-                                Cultural
-                              </h6>
-                              <label
-                                class="text-base font-light text-white/70"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <h3 class="text-lg font-bold">Mountain Adventure Trails</h3>
+                <p class="text-sm text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/patung.jpg"
+                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-lg font-bold">Historic Cityscape</h3>
+                <p class="text-sm text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_1.jpg"
+                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-lg font-bold">Serene Lake View</h3>
+                <p class="text-sm text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_2.jpg"
+                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-lg font-bold">Lush Green Forest</h3>
+                <p class="text-sm text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_3.jpg"
+                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-lg font-bold">Sunset Over Hills</h3>
+                <p class="text-sm text-white/70">Banyuwangi</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Chatbot UI -->
-    <div
-      id="chatbot-container"
-      style="
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        font-family: Arial, sans-serif;
-      "
-    >
-      <button
-        id="chatbot-toggle"
-        style="
-          background-color: #4ade80;
-          border: none;
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          cursor: pointer;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        "
-      >
-        <span style="font-size: 30px; color: black">💬</span>
-      </button>
-      <div
-        id="chatbot"
-        style="
-          display: none;
-          width: 300px;
-          height: 400px;
-          background: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-          margin-top: 10px;
-          display: flex;
-          flex-direction: column;
-        "
-      >
+      </section>
+      <section class="px-6 py-10 hidden" id="all-tours-section">
+        <h2 class="text-2xl font-semibold mb-6">All Tours</h2>
         <div
-          id="chatbot-messages"
-          style="
-            flex: 1;
-            padding: 10px;
-            overflow-y: auto;
-            font-size: 14px;
-            color: black;
-          "
+          id="all-tours-content"
+          class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
         ></div>
-        <form
-          id="chatbot-form"
-          style="display: flex; border-top: 1px solid #ddd"
+        <button
+          id="back-to-featured"
+          class="mt-6 px-4 py-2 bg-green-500 rounded text-white hover:bg-green-600"
         >
-          <input
-            id="chatbot-input"
-            type="text"
-            placeholder="Tanyakan tentang wisata Banyuwangi..."
-            style="
-              flex: 1;
-              border: none;
-              padding: 10px;
-              font-size: 14px;
-              border-radius: 0 0 0 10px;
-            "
-            autocomplete="off"
-          />
-          <button
-            type="submit"
-            style="
-              background-color: #4ade80;
-              border: none;
-              padding: 0 15px;
-              cursor: pointer;
-              border-radius: 0 0 10px 0;
-            "
+          Back to Featured Destinations
+        </button>
+      </section>
+      <script>
+        document
+          .getElementById("all-tours-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            // Hide featured destinations
+            document
+              .getElementById("featured-destinations-section")
+              .classList.add("hidden");
+            // Show all tours section
+            document
+              .getElementById("all-tours-section")
+              .classList.remove("hidden");
+            // Load all tours content from alltour.html
+            fetch("alltour.html")
+              .then((response) => response.text())
+              .then((data) => {
+                // Parse the fetched HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, "text/html");
+                // Extract the section with all tours grid
+                const allToursGrid = doc.querySelector("section.grid");
+                // Replace the content of all-tours-content div
+                const allToursContent =
+                  document.getElementById("all-tours-content");
+                allToursContent.innerHTML = "";
+                if (allToursGrid) {
+                  allToursContent.appendChild(allToursGrid);
+                }
+              });
+          });
+        document
+          .getElementById("back-to-featured")
+          .addEventListener("click", function () {
+            // Show featured destinations
+            document
+              .getElementById("featured-destinations-section")
+              .classList.remove("hidden");
+            // Hide all tours section
+            document
+              .getElementById("all-tours-section")
+              .classList.add("hidden");
+            // Clear all tours content
+            document.getElementById("all-tours-content").innerHTML = "";
+          });
+      </script>
+
+      <!-- Map Locations -->
+      <section class="px-6 py-10">
+        <div class="glass rounded-3xl p-8 max-w-6xl mx-auto">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold">Map Locations</h2>
+            <button
+              class="text-white border border-white px-4 py-1 rounded hover:bg-black hover:border-black transition"
+            >
+              View All
+            </button>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6"
           >
-            Kirim
-          </button>
-        </form>
-      </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_4.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Coastal Cliffside</h3>
+                <p class="text-xs text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_5.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Hidden Waterfall</h3>
+                <p class="text-xs text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_6.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Ancient Ruins</h3>
+                <p class="text-xs text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_7.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Serene Riverbank</h3>
+                <p class="text-xs text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_8.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Sunlit Meadow</h3>
+                <p class="text-xs text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/img_9.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Rocky Outcrop</h3>
+                <p class="text-xs text-white/70">Banyuwangi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="px-6 py-10">
+        <div class="glass rounded-3xl p-8 max-w-6xl mx-auto">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold">Categories</h2>
+            <button
+              class="text-white border border-white px-4 py-1 rounded hover:bg-black hover:border-black transition"
+            >
+              View All
+            </button>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6"
+          >
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/food.png"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Food</h3>
+                <p class="text-xs text-white/70">Delicious local cuisine</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/patung.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Cultural</h3>
+                <p class="text-xs text-white/70">Rich cultural heritage</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/pantai.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Beach</h3>
+                <p class="text-xs text-white/70">Beautiful sandy beaches</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/hutan.jpg"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Forest</h3>
+                <p class="text-xs text-white/70">Lush green forests</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/vr.png"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Virtual Tours</h3>
+                <p class="text-xs text-white/70">Explore remotely</p>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden group">
+              <img
+                src="images/trust.png"
+                class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black via-black/40 to-transparent"
+              >
+                <h3 class="text-md font-bold">Trusted Guides</h3>
+                <p class="text-xs text-white/70">Experienced and reliable</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="w-full text-center py-6 text-sm text-white/50">
+        &copy; 2025 TravelVerse. All rights reserved.
+      </footer>
     </div>
-
-    <script>
-      const chatbotToggle = document.getElementById("chatbot-toggle");
-      const chatbot = document.getElementById("chatbot");
-      const chatbotMessages = document.getElementById("chatbot-messages");
-      const chatbotForm = document.getElementById("chatbot-form");
-      const chatbotInput = document.getElementById("chatbot-input");
-
-      // Initially chatbot is hidden, only button visible
-      chatbot.style.display = "none";
-
-      chatbotToggle.addEventListener("click", () => {
-        if (chatbot.style.display === "none" || chatbot.style.display === "") {
-          chatbot.style.display = "flex";
-          chatbotInput.focus();
-        } else {
-          chatbot.style.display = "none";
-        }
-      });
-
-      function appendMessage(sender, text) {
-        const messageDiv = document.createElement("div");
-        messageDiv.style.marginBottom = "10px";
-        messageDiv.style.textAlign = sender === "user" ? "right" : "left";
-        messageDiv.innerHTML =
-          "<strong>" +
-          (sender === "user" ? "Anda" : "Bot") +
-          ":</strong> " +
-          text;
-        chatbotMessages.appendChild(messageDiv);
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-      }
-
-      function getBotResponse(message) {
-        // Simple rule-based responses for demonstration
-        const msg = message.toLowerCase();
-        if (msg.includes("wisata") || msg.includes("tempat wisata")) {
-          return "Banyuwangi memiliki banyak tempat wisata menarik seperti Kawah Ijen, Pantai Pulau Merah, dan Desa Adat Osing.";
-        } else if (msg.includes("kuliner")) {
-          return "Anda bisa mencoba makanan tradisional seperti Sego Tempong dan Pecel Pitik di Banyuwangi.";
-        } else if (msg.includes("jam buka")) {
-          return "Jam buka tempat wisata biasanya mulai pukul 08.00 hingga 17.00 WIB.";
-        } else if (msg.includes("harga") || msg.includes("tiket")) {
-          return "Harga tiket bervariasi tergantung tempat wisata, biasanya mulai dari Rp 10.000 hingga Rp 50.000.";
-        } else if (msg.includes("halo") || msg.includes("hai")) {
-          return "Halo! Ada yang bisa saya bantu tentang wisata di Banyuwangi?";
-        } else {
-          return "Maaf, saya belum mengerti pertanyaan Anda. Silakan coba tanyakan hal lain tentang wisata Banyuwangi.";
-        }
-      }
-
-      chatbotForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const userMessage = chatbotInput.value.trim();
-        if (!userMessage) return;
-        appendMessage("user", userMessage);
-        chatbotInput.value = "";
-        setTimeout(() => {
-          const botReply = getBotResponse(userMessage);
-          appendMessage("bot", botReply);
-        }, 500);
-      });
-    </script>
   </body>
 </html>
