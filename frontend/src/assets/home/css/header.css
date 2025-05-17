@@ -1,138 +1,28 @@
-/* Reset & dasar */
-body {
-  background: dodgerblue;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* Tulisan Brand Travel Verse */
-.brand {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  z-index: 9999;
-  font-family: "Arial", sans-serif;
-}
-
-/* Tombol toggle sidebar (hamburger) */
-.center {
-  top: 20px;
-  right: 20px;
-  position: fixed;
-  width: 50px;
-  z-index: 9999;
-  cursor: pointer;
-}
-
-.center:before,
-.center:after,
-.center div {
-  background: white;
-  content: "";
-  display: block;
-  height: 6px;
-  border-radius: 3px;
-  margin: 7px 0;
-  transition: 0.5s;
-}
-
-.center.active:before {
-  transform: translateY(12px) rotate(135deg);
-}
-.center.active:after {
-  transform: translateY(-12px) rotate(-135deg);
-}
-.center.active div {
-  transform: scale(0);
-}
-
-/* Sidebar */
-#sidebar-wrapper {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 100%;
-  overflow-y: hidden;
-  background: #fff;
-  opacity: 0.95;
-  transition: all 0.5s;
-  display: flex;
-  align-items: center;
-}
-
-/* Saat sidebar muncul */
-#wrapper.menuDisplayed #sidebar-wrapper {
-  width: 1290px;
-}
-
-/* Konten utama */
-#page-content-wrapper {
-  width: 100%;
+.site-header {
   position: relative;
-  padding: 15px;
-  transition: all 0.5s;
+
+  background-color: transparent; /* biar gambar background terlihat */
+  z-index: 999;
+  border-bottom: none; /* hilangkan border */
 }
 
-/* Sidebar menu */
-.sidebar-nav {
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  text-align: center;
+.site-hero {
+  position: relative; /* supaya anak-anak absolute mengacu ke sini */
+  background-size: cover;
+  background-position: center;
 }
 
-.sidebar-nav li {
-  line-height: 40px;
-  padding: 10px;
-  transition: all 0.3s;
+.site-logo {
+  position: absolute; /* bebas posisi di dalam site-hero */
+  top: 2px;
+  left: 20px;
+  z-index: 10; /* agar muncul di atas gambar */
 }
 
-.sidebar-nav li a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-}
-
-.sidebar-nav li:hover {
-  background: greenyellow;
-  color: #fff;
-}
-.bg-image {
-  width: 1280px;
-  height: 600px;
-}
-.explore-btn {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-}
-.heading {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  color: white;
-  font-size: 2.5rem;
+.site-logo a {
+  font-size: 28px;
   font-weight: bold;
-  text-align: center;
-}
-
-.sub-heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-  max-width: 600px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white; /* biar tulisan kontras */
 }

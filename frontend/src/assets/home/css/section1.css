@@ -1,0 +1,31 @@
+.section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.btn-play {
+  display: inline-flex;
+  align-items: center;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-play:hover {
+  background-color: #c82333;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-play .fa-play {
+  font-size: 16px;
+}

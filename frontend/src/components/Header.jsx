@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import "../assets/home/css/header.css";
+import "../../assets/home/css/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import IjenImage from "../assets/home/img/IjenBanyuwangi.jpg";
+import IjenImage from "../../assets/home/img/IjenBanyuwangi.jpg";
 
 const Header = () => {
   useEffect(() => {
@@ -45,7 +45,7 @@ const Header = () => {
       <div>
         <img src={IjenImage} className="bg-image" alt="Background" />
       </div>
-      <div className="brand">TravelVerse</div>
+      <div className="brand">Travel Verse</div>
       <div id="menu-toggle" className="center">
         <div></div>
       </div>
