@@ -1,31 +1,76 @@
+::-moz-selection {
+  color: #fff;
+  background: #65c0ba;
+}
+
+::selection {
+  color: #fff;
+  background: #65c0ba;
+}
+
+a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #000;
+  font-family: "Poppins", times, serif;
+}
+
 .section {
-  padding: 60px 0;
-  background-color: #f8f9fa;
+  padding: 7em 0;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+@media (max-width: 991.98px) {
+  .section {
+    padding: 3em 0;
+  }
 }
 
-.btn-play {
-  display: inline-flex;
-  align-items: center;
-  background-color: #dc3545;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
+.btn-play .icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
-.btn-play:hover {
-  background-color: #c82333;
-  text-decoration: none;
-  color: #fff;
+.btn-play .icon > span {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
-.btn-play .fa-play {
-  font-size: 16px;
+.btn-play .text {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.btn-play:hover .icon {
+  border-color: #1a1a1a;
+}
+
+.btn-play:hover .icon span {
+  color: #000;
 }

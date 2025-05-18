@@ -5,6 +5,7 @@ import Sectionimg from "../components/home/Sectionimg";
 import Section1 from "../components/home/Section1";
 import Section2 from "../components/home/section2";
 import SectionSlider from "../components/home/SectionSlider";
+import Footer from "../components/home/footer";
 // import Section1 from "../components/home/Section1";
 // import Konten from "../components/home/Konten";
 const Home = () => {
@@ -15,8 +16,7 @@ const Home = () => {
       <Section1 />
       <Section2 />
       <SectionSlider />
-      {/* <Konten />
-      <Section1 /> */}
+      <Footer />
     </div>
   );
 };

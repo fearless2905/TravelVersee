@@ -1,19 +1,29 @@
+// src/components/SectionWelcome.jsx
 import React, { useEffect } from "react";
-("../../assets/home/css/sectionimg.css");
-import "bootstrap/dist/css/bootstrap.min.css";
-import Baluran from "../../assets/home/img/baluran.jpg";
 import AOS from "aos";
+import { Fancybox } from "@fancyapps/ui";
 import "aos/dist/aos.css";
-const Section1 = () => {
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "../../assets/home/css/section1.css";
+import Baluran from "../../assets/home/img/baluran.jpg";
+
+const SectionWelcome = () => {
+  useEffect(() => {
+    AOS.init();
+    Fancybox.bind("[data-fancybox]", {}); // Inisialisasi Fancybox
+
+    return () => {
+      Fancybox.destroy(); // Bersihkan saat komponen unmount
+    };
+  }, []);
+
   return (
     <section className="section" id="next-section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 mb-4" data-aos="fade-up">
-            <p
-              className="img-fluid"
-              style={{ backgroundImage: `url(${Baluran})` }}
-            ></p>
+            <img src={Baluran} alt="Baluran" className="img-fluid" />
           </div>
           <div className="col-lg-6 pl-lg-5" data-aos="fade-up">
             <h2 className="mb-4">Welcome To TravelVerse</h2>
@@ -26,14 +36,13 @@ const Section1 = () => {
             <p className="pt-4">
               <a
                 href="https://youtu.be/wGumANS-uXI?si=vRjSNVbgHGSjwoNR"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-play d-flex"
+                data-fancybox
+                className="btn-play d-flex align-items-center"
               >
-                <span className="icon align-self-center mr-3">
-                  <span className="fa fa-play"></span>
+                <span className="icon me-3">
+                  <i className="fa fa-play"></i>
                 </span>
-                <span className="text align-self-center">Tonton Video</span>
+                <span className="text">Tonton Video</span>
               </a>
             </p>
           </div>
@@ -43,4 +52,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default SectionWelcome;

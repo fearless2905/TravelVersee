@@ -1,28 +1,336 @@
+::-moz-selection {
+  color: #fff;
+  background: #65c0ba;
+}
+
+::selection {
+  color: #fff;
+  background: #65c0ba;
+}
+
+a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #000;
+  font-family: "Poppins", times, serif;
+}
+
+.container-fluid {
+  max-width: 1600px;
+}
+
+.btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+}
+
+.btn.btn-outline-light {
+  border-width: 2px;
+}
+
+.btn.uppercase {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+}
+.btn.btn-primary {
+  background: none;
+  border-width: 2px;
+}
+
+.btn.btn-primary:hover {
+  background: #65c0ba;
+}
+
+.btn,
+.form-control {
+  outline: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn:focus,
+.btn:active,
+.form-control:focus,
+.form-control:active {
+  outline: none;
+}
+
+.form-control {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  height: 50px;
+  border: 2px solid #cccccc;
+}
+
+.form-control:active,
+.form-control:focus {
+  border: 2px solid #65c0ba;
+}
+
+textarea.form-control {
+  height: inherit;
+}
 .site-header {
-  position: relative;
-
-  background-color: transparent; /* biar gambar background terlihat */
-  z-index: 999;
-  border-bottom: none; /* hilangkan border */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 60px 0;
+  z-index: 2;
 }
 
-.site-hero {
-  position: relative; /* supaya anak-anak absolute mengacu ke sini */
-  background-size: cover;
-  background-position: center;
-}
-
-.site-logo {
-  position: absolute; /* bebas posisi di dalam site-hero */
-  top: 2px;
-  left: 20px;
-  z-index: 10; /* agar muncul di atas gambar */
+.menu-open .site-header {
+  position: fixed;
 }
 
 .site-logo a {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+  font-family: "Poppins", arial, sans-serif;
+}
+
+.site-navbar {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  min-height: 300px;
+  overflow-y: scroll;
+}
+
+.site-navbar nav {
+  text-align: center;
+}
+
+.site-navbar nav .menu {
+  font-family: "Poppins", arial, sans-serif;
+}
+
+.site-navbar nav .menu li a {
+  color: #000;
+  font-size: 30px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.site-navbar nav .menu li a:hover {
+  color: #65c0ba;
+}
+
+.site-navbar nav .menu li.active a {
+  color: #65c0ba;
+}
+
+.site-navbar nav .menu li.active a:before {
+  width: 100%;
+}
+
+.full-height {
+  height: 100vh;
+  min-height: 700px;
+}
+
+.site-hero {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Vertikal center */
+  justify-content: center;
+  text-align: center; /* Untuk memastikan teks rata tengah */
+  position: relative; /* Jika ada overlay */
+  color: white;
+}
+
+.site-hero .scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   text-transform: uppercase;
-  text-decoration: none;
-  color: white; /* biar tulisan kontras */
+  font-size: 12px;
+  color: #fff;
+}
+
+.site-hero .scroll-down > span {
+  position: relative;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 13px;
+  display: block;
+}
+
+/* .site-hero.overlay:before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+} */
+.site-hero .btn-primary {
+  color: #fff;
+}
+
+.site-hero-inner {
+  height: 100vh;
+  min-height: 700px;
+}
+
+.site-hero-inner .heading {
+  font-size: 80px;
+  font-family: "Poppins", arial, sans-serif;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  .site-hero-inner .heading {
+    font-size: 40px;
+  }
+}
+.site-hero-inner .sub-heading {
+  font-size: 30px;
+  font-weight: 200;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991.98px) {
+  .site-hero-inner .sub-heading {
+    font-size: 18px;
+  }
+}
+
+.site-hero-inner .sub-heading a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.site-hero-inner .sub-heading a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.menu-open .site-menu-toggle span {
+  background: #000;
+}
+
+.site-menu-toggle {
+  float: right;
+  width: 40px;
+  height: 45px;
+  position: relative;
+  margin: 0px auto;
+  z-index: 200;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.site-menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.site-menu-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+.site-menu-toggle span:nth-child(2) {
+  top: 10px;
+}
+
+.site-menu-toggle span:nth-child(3) {
+  top: 20px;
+}
+
+.site-menu-toggle.open span:nth-child(1) {
+  top: 13px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.site-menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.site-menu-toggle.open span:nth-child(3) {
+  top: 13px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.section {
+  padding: 7em 0;
+}
+
+@media (max-width: 991.98px) {
+  .section {
+    padding: 3em 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .lead {
+    font-size: 16px;
+  }
 }
