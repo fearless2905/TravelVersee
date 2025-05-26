@@ -54,6 +54,9 @@ const Chatbot = () => {
       </button>
       {isOpen && (
         <div id="chatbot">
+          <div id="chatbot-header">
+            ChatBot
+          </div>
           <div id="chatbot-messages" ref={messagesEndRef}>
             {messages.map((msg, index) => (
               <div
