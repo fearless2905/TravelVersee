@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import PantaiNongko from "../../assets/dashboard/img/pantainongko.jpg";
 const Section = () => {
   return (
     <div>
@@ -36,16 +36,24 @@ const Section = () => {
             class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
             id="featured-destinations-grid"
           >
-            <div class="relative rounded-2xl overflow-hidden group">
-              <img
-                src="images/pantai.jpg"
-                class="w-full h-64 object-cover transition-transform group-hover:scale-105"
-              />
-              <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent">
-                <h3 class="text-lg font-bold">Tropical Paradise Beach</h3>
-                <p class="text-sm text-white/70">Banyuwangi, Indonesia</p>
+            <a
+              href="/vrbackground/pantainongko/nongko.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+                <img
+                  src={PantaiNongko}
+                  alt="Pantai Nongko"
+                  className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/40 to-transparent">
+                  <h3 className="text-lg font-bold">Tropical Paradise Beach</h3>
+                  <p className="text-sm text-white/70">Banyuwangi, Indonesia</p>
+                </div>
               </div>
-            </div>
+            </a>
+
             <div class="relative rounded-2xl overflow-hidden group">
               <img
                 src="images/kerbau..jpg"
