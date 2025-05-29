@@ -15,22 +15,21 @@ const Chatbot = () => {
   };
 
   const getBotResponse = async (message) => {
-  try {
-    const response = await axios.post("http://localhost:5000/api/chat", {
-      messages: [
-        { role: "system", content: "Anda adalah asisten wisata untuk Banyuwangi." },
-        { role: "user", content: message },
-      ],
-    });
+    try {
+      const response = await axios.post("http://localhost:5000/api/chat", {
+        messages: [
+          { role: "system", content: "Anda adalah asisten wisata untuk Banyuwangi." },
+          { role: "user", content: message },
+        ],
+      });
 
-    const reply = response.data.reply.trim();
-    appendMessage("bot", reply);
-  } catch (error) {
-    console.error("API Proxy Error:", error);
-    appendMessage("bot", "Maaf, terjadi kesalahan saat menghubungi layanan AI.");
-  }
-};
-
+      const reply = response.data.reply.trim();
+      appendMessage("bot", reply);
+    } catch (error) {
+      console.error("API Proxy Error:", error);
+      appendMessage("bot", "Maaf, terjadi kesalahan saat menghubungi layanan AI.");
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,9 +53,7 @@ const Chatbot = () => {
       </button>
       {isOpen && (
         <div id="chatbot">
-          <div id="chatbot-header">
-            ChatBot
-          </div>
+          <div id="chatbot-header">ChatBot</div>
           <div id="chatbot-messages" ref={messagesEndRef}>
             {messages.map((msg, index) => (
               <div
