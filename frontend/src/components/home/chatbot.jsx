@@ -58,12 +58,11 @@ const Chatbot = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
+                className={msg.sender === "user" ? "user-message" : "bot-message"}
                 style={{
                   marginBottom: "10px",
-                  textAlign: msg.sender === "user" ? "right" : "left",
                 }}
               >
-                <strong>{msg.sender === "user" ? "Anda" : "Bot"}:</strong>{" "}
                 {msg.text}
               </div>
             ))}
