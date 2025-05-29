@@ -16,7 +16,7 @@ app.post("/api/chat", async (req, res) => {
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model: "openai/gpt-3.5-turbo", // Ganti dengan model yang sesuai keinginanmu yang peting model tersebut gratis(tidak berbayar)
+        model: "openai/gpt-3.5-turbo", // Ganti dengan model yang sesuai keinginanmu yang penting model tersebut gratis(tidak berbayar)
         messages: messages,
       },
       {
